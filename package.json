@@ -1,0 +1,42 @@
+{
+  "name": "friseur-website",
+  "version": "1.0.0",
+  "description": "Modern hair salon website built with Relume components",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@relume_io/relume-tailwind": "^1.0.0",
+    "@relume_io/relume-ui": "^1.0.0",
+    "framer-motion": "^10.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.4.0"
+  },
+  "keywords": [
+    "friseur",
+    "hair-salon",
+    "relume",
+    "react",
+    "vite"
+  ],
+  "author": "",
+  "license": "MIT"
+}
