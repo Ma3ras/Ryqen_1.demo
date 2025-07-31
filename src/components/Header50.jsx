@@ -35,9 +35,17 @@ export function Header50() {
           <source srcSet="/herosection_dienstleistungen1.webp" type="image/webp" />
           <img
             src="/herosection_dienstleistungen1.jpg"
-            className="size-full object-cover"
+            className="size-full object-cover transition-all duration-300 ease-out"
+            style={{ 
+              filter: 'blur(4px)',
+              transform: 'scale(1.05)'
+            }}
             alt="Professional hair salon services and styling"
             loading="eager"
+            onLoad={(e) => {
+              e.target.style.filter = 'blur(0px)';
+              e.target.style.transform = 'scale(1)';
+            }}
           />
         </picture>
         <div className="absolute inset-0 bg-black/50" />

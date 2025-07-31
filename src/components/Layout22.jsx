@@ -33,9 +33,17 @@ export function Layout22() {
             <source srcSet="/ueber_uns1.webp" type="image/webp" />
             <img
               src="/ueber_uns1.jpg"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover blur-sm transition-all duration-300 ease-out"
+              style={{ 
+                filter: 'blur(4px)',
+                transform: 'scale(1.05)'
+              }}
               alt="Salon interior - modern hair salon with professional styling stations"
               loading="eager"
+              onLoad={(e) => {
+                e.target.style.filter = 'blur(0px)';
+                e.target.style.transform = 'scale(1)';
+              }}
             />
           </picture>
         </div>
