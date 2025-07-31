@@ -14,31 +14,25 @@ export function Layout22() {
   return (
     <section id="relume" className="bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 md:items-center">
-        {/* Left side - Text content with white background */}
-        <div className="px-[5%] md:pr-16 lg:pr-20 bg-white h-full flex flex-col justify-center py-20 md:py-32">
-
-          <h2
-            className="mb-8 text-5xl leading-[1.1] font-medium md:mb-10 md:text-6xl lg:text-7xl text-[#2E2E2E]"
-            style={{ fontFamily: 'Poppins, sans-serif' }}
-          >
-            Mehr als ein Schnitt – ein Ort, an dem Sie sich wohlfühlen.
-          </h2>
-          <p
-            className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <button 
-              className="rounded-lg bg-[#2E2E2E] px-10 py-5 text-lg font-medium text-white hover:bg-[#404040] transition-colors"
-              onClick={openCituroBooking}
-            >
-              Buchen & Preise ansehen
-            </button>
+        <div className="px-[5%] md:pr-12 lg:pr-16 h-full flex flex-col justify-center">
+          <div className="max-w-lg">
+            <h2 className="mb-4 text-4xl font-medium text-gray-900 md:mb-6 md:text-5xl lg:text-6xl">
+              Mehr als ein Schnitt – ein Ort, an dem Sie sich wohlfühlen.
+            </h2>
+            <p className="text-gray-600 md:text-lg">
+              Unser Salon ist mehr als nur ein Ort für Haarschnitte. Hier schaffen wir eine Atmosphäre, in der Sie sich entspannen und verwöhnen lassen können. Mit über 10 Jahren Erfahrung und einem Team von leidenschaftlichen Friseuren bieten wir Ihnen einen Service, der Ihre natürliche Schönheit unterstreicht.
+            </p>
+            <div className="mt-6 md:mt-8">
+              <button 
+                className="inline-flex items-center gap-x-2 rounded-lg bg-[#2E2E2E] px-8 py-4 text-base font-medium text-white hover:bg-[#404040] transition-colors"
+                onClick={openCituroBooking}
+              >
+                Buchen & Preise ansehen
+                <RxChevronRight className="size-5" />
+              </button>
+            </div>
           </div>
         </div>
-        {/* Right side - Image extending to edge */}
         <div className="w-full h-full relative">
           {!imageLoaded && (
             <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center z-10">
@@ -50,8 +44,8 @@ export function Layout22() {
             <source srcSet="/ueber_uns1.webp" type="image/webp" />
             <img
               src="/ueber_uns1.jpg"
-              className={`w-full h-full object-cover transition-all duration-300 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0 blur-sm'
+              className={`w-full h-full object-cover transition-opacity duration-200 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               alt="Salon interior - modern hair salon with professional styling stations"
               loading="lazy"
@@ -60,7 +54,6 @@ export function Layout22() {
           </picture>
         </div>
       </div>
-      <div style={{ width: '100%', height: '2px', backgroundColor: '#9CA3AF', position: 'relative', top: '0px', opacity: '0.5' }}></div>
     </section>
   );
 }

@@ -1,28 +1,19 @@
 "use client";
 
-
-import React, { useState } from "react";
+import React from "react";
 import { openCituroBooking } from "../utils/cituro";
 
 export function Header50() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
   return (
     <section id="relume" className="relative px-[5%]">
       <div className="relative z-10 container">
-        <div className="flex items-center justify-center py-8 text-center md:py-12 lg:py-16">
+        <div className="flex max-h-[60rem] min-h-svh items-center justify-center py-16 text-center md:py-24 lg:py-28">
           <div className="w-full max-w-lg">
-            <h1 className="mb-5 text-6xl font-medium text-text-alternative md:mb-6 md:text-9xl lg:text-10xl">
-              Dein Friseur für moderne Schnitte & natürliche Farben
+            <h1 className="mb-5 text-6xl font-medium text-white md:mb-6 md:text-9xl lg:text-10xl">
+              Unsere Friseurleistungen & Preise für deinen perfekten Look
             </h1>
-            <p className="text-text-alternative md:text-md">
-              Seit 2020 bieten wir erstklassige Haarschnitte und Farbservices.
-              Unsere 120+ Google-Bewertungen sprechen für unsere persönliche
-              Beratung und Zufriedenheit unserer Kunden.
+            <p className="text-white md:text-md">
+              Entdecke unser umfassendes Angebot an Haarschnitten, Farbbehandlungen und Styling-Services. Von klassischen Schnitten bis zu trendigen Techniken – wir sorgen für deinen perfekten Look.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
               <button 
@@ -39,22 +30,14 @@ export function Header50() {
         </div>
       </div>
       <div className="absolute inset-0 z-0">
-        {!imageLoaded && (
-          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-            <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
-          </div>
-        )}
         <picture>
           <source srcSet="/herosection_dienstleistungen1.avif" type="image/avif" />
           <source srcSet="/herosection_dienstleistungen1.webp" type="image/webp" />
           <img
             src="/herosection_dienstleistungen1.jpg"
-            className={`size-full object-cover transition-all duration-300 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0 blur-sm'
-            }`}
+            className="size-full object-cover"
             alt="Professional hair salon services and styling"
             loading="eager"
-            onLoad={handleImageLoad}
           />
         </picture>
         <div className="absolute inset-0 bg-black/50" />
