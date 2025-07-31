@@ -8,6 +8,7 @@ import {
   ClockClockwise, 
   CaretRight 
 } from "@phosphor-icons/react";
+import { openCituroBooking } from "../utils/cituro";
 
 export function Layout299() {
   return (
@@ -41,7 +42,10 @@ export function Layout299() {
             </div>
             <h3 className="text-xl font-medium md:text-2xl text-white mb-3 md:mb-4">Farbberatung</h3>
             <p className="text-gray-300 text-sm md:text-base mb-6 flex-grow">Professionelle Farbberatung – für einen Farbton, der wirklich zu Ihnen passt.</p>
-            <button className="text-white font-medium flex items-center gap-2 hover:text-gray-300 transition-colors text-base mx-auto">
+            <button 
+              className="text-white font-medium flex items-center gap-2 hover:text-gray-300 transition-colors text-base mx-auto"
+              onClick={openCituroBooking}
+            >
               Wunsch-Termin buchen
               <CaretRight className="size-5" />
             </button>
@@ -53,7 +57,10 @@ export function Layout299() {
             </div>
             <h3 className="text-xl font-medium md:text-2xl text-white mb-3 md:mb-4">Online Termin</h3>
             <p className="text-gray-300 text-sm md:text-base mb-6 flex-grow">Online buchen – jederzeit & ohne Wartezeit.</p>
-            <button className="text-white font-medium flex items-center gap-2 hover:text-gray-300 transition-colors text-base mx-auto">
+            <button 
+              className="text-white font-medium flex items-center gap-2 hover:text-gray-300 transition-colors text-base mx-auto"
+              onClick={openCituroBooking}
+            >
               Online-Termin wählen
               <CaretRight className="size-5" />
             </button>

@@ -18,7 +18,7 @@ export default function HomePage() {
       <Header30 />
       <Layout249 />
       <Layout24 />
-      <ServicePricing />
+      <ServicePricing patternBackground={true} patternName="Pattern10" />
       <Testimonial19 />
       <Layout299 />
       <Gallery22 />

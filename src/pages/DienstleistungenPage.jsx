@@ -14,7 +14,7 @@ export default function DienstleistungenPage() {
       <Navbar1 />
       <Header50 />
       <Layout249 />
-      <ServicePricing darkBackground={true} />
+      <ServicePricing darkBackground={true} patternBackground={true} />
       <Gallery5 />
       <Testimonial6 />
       <Cta27 />

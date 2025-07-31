@@ -3,7 +3,8 @@
 import { useMediaQuery } from "@relume_io/relume-ui";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { openCituroBooking } from "../utils/cituro";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,6 +38,34 @@ const useRelume = () => {
   };
 };
 
+// Custom Link component that scrolls to top
+const ScrollToTopLink = ({ to, children, className, onClick }) => {
+  const navigate = useNavigate();
+  const location = window.location.pathname;
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    
+    if (location === to) {
+      // If already on the page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // If navigating to a different page, navigate and immediately set scroll to top
+      navigate(to);
+      // Immediately set scroll position to top without animation
+      window.scrollTo(0, 0);
+    }
+    
+    if (onClick) onClick();
+  };
+  
+  return (
+    <a href={to} onClick={handleClick} className={className}>
+      {children}
+    </a>
+  );
+};
+
 export function Navbar1() {
   const useActive = useRelume();
   return (
@@ -51,12 +80,12 @@ export function Navbar1() {
     >
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <Link to="/">
+          <ScrollToTopLink to="/">
             <img
               src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
               alt="Logo image"
             />
-          </Link>
+          </ScrollToTopLink>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
             onClick={useActive.toggleMobileMenu}
@@ -111,27 +140,38 @@ export function Navbar1() {
           transition={{ duration: 0.4 }}
           className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
-          <Link
+          <ScrollToTopLink
+            to="/"
+            className="block py-3 text-base font-medium text-[#2E2E2E] first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2 hover:text-gray-600 transition-colors"
+            onClick={() => useActive.toggleMobileMenu()}
+          >
+            Startseite
+          </ScrollToTopLink>
+          <ScrollToTopLink
             to="/ueber-uns"
             className="block py-3 text-base font-medium text-[#2E2E2E] first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2 hover:text-gray-600 transition-colors"
+            onClick={() => useActive.toggleMobileMenu()}
           >
             Über uns
-          </Link>
-          <Link
+          </ScrollToTopLink>
+          <ScrollToTopLink
             to="/dienstleistungen-&-preise"
             className="block py-3 text-base font-medium text-[#2E2E2E] first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2 hover:text-gray-600 transition-colors"
+            onClick={() => useActive.toggleMobileMenu()}
           >
             Dienstleistungen
-          </Link>
-          <Link
+          </ScrollToTopLink>
+          <ScrollToTopLink
             to="/kontakt"
             className="block py-3 text-base font-medium text-[#2E2E2E] first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2 hover:text-gray-600 transition-colors"
+            onClick={() => useActive.toggleMobileMenu()}
           >
             Kontakt
-          </Link>
+          </ScrollToTopLink>
           <div className="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-4 lg:flex-row">
             <button
               className="rounded-lg bg-[#2E2E2E] px-6 py-3 text-base font-medium text-white hover:bg-[#404040] transition-colors"
+              onClick={openCituroBooking}
             >
               Jetzt Termin buchen
             </button>

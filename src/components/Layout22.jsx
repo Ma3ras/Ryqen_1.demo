@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { openCituroBooking } from "../utils/cituro";
 import { RxChevronRight } from "react-icons/rx";
 
 export function Layout22() {
@@ -23,7 +24,10 @@ export function Layout22() {
             
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <button className="rounded-lg bg-[#2E2E2E] px-10 py-5 text-lg font-medium text-white hover:bg-[#404040] transition-colors">
+            <button 
+              className="rounded-lg bg-[#2E2E2E] px-10 py-5 text-lg font-medium text-white hover:bg-[#404040] transition-colors"
+              onClick={openCituroBooking}
+            >
               Buchen & Preise ansehen
             </button>
           </div>

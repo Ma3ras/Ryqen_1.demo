@@ -2,6 +2,7 @@
 
 
 import React from "react";
+import { openCituroBooking } from "../utils/cituro";
 
 export function Cta27() {
   return (
@@ -30,7 +31,10 @@ export function Cta27() {
             perfekten Look kreieren.
           </p>
           <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-            <button className="rounded-lg bg-white px-8 py-4 text-base font-medium text-gray-800 hover:bg-gray-100 transition-colors">
+            <button 
+              className="rounded-lg bg-white px-8 py-4 text-base font-medium text-gray-800 hover:bg-gray-100 transition-colors"
+              onClick={openCituroBooking}
+            >
               Buchen & Preise ansehen
             </button>
             <button className="rounded-lg bg-transparent border border-white px-8 py-4 text-base font-medium text-white hover:bg-white hover:text-gray-800 transition-colors">

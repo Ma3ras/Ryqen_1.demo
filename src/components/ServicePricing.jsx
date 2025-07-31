@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export function ServicePricing({ darkBackground = false }) {
+export function ServicePricing({ darkBackground = false, patternBackground = false, patternName = 'Pattern9' }) {
+  const [patternLoaded, setPatternLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate pattern loading
+    const timer = setTimeout(() => {
+      setPatternLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <section className={`px-[5%] py-16 md:py-24 lg:py-28 ${darkBackground ? 'bg-[#2E2E2E]' : 'bg-white'}`}>
-      <div className="container mx-auto">
+    <section 
+      className={`px-[5%] py-16 md:py-24 lg:py-28 ${darkBackground ? 'bg-[#2E2E2E]' : 'bg-white'} relative`}
+      style={patternBackground ? {
+        backgroundImage: `url('/${patternName}.webp')`,
+        backgroundSize: '400px 400px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'repeat'
+      } : {}}
+    >
+      {patternBackground && <div className={`absolute inset-0 ${darkBackground ? 'bg-[#2E2E2E]' : 'bg-white'}`} style={{ opacity: 0.2 }}></div>}
+      <style jsx>{`
+        .pricing-box-shadow {
+          box-shadow: ${darkBackground 
+            ? '0 10px 25px rgba(255, 255, 255, 0.2)' 
+            : '0 10px 25px rgba(0, 0, 0, 0.3)'
+          };
+        }
+      `}</style>
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className={`text-4xl md:text-5xl lg:text-6xl font-medium mb-6 ${darkBackground ? 'text-white' : 'text-gray-900'}`}>
             Unsere Dienstleistungen
@@ -15,9 +41,9 @@ export function ServicePricing({ darkBackground = false }) {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
                      {/* Cut & Go */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -59,9 +85,9 @@ export function ServicePricing({ darkBackground = false }) {
           </div>
 
                      {/* Farbsorglospaket */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -99,9 +125,9 @@ export function ServicePricing({ darkBackground = false }) {
           </div>
 
                      {/* Haarkur und Pflege */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -147,9 +173,9 @@ export function ServicePricing({ darkBackground = false }) {
                                 </div>
 
                      {/* Haarverlängerung und Extensions */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -206,9 +232,9 @@ export function ServicePricing({ darkBackground = false }) {
           </div>
 
                      {/* Low Budget Farbpakete - Box 1 */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -246,9 +272,9 @@ export function ServicePricing({ darkBackground = false }) {
           </div>
 
                      {/* Low Budget Farbpakete - Box 2 */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',
@@ -290,9 +316,9 @@ export function ServicePricing({ darkBackground = false }) {
            </div>
 
                      {/* Herrenhaarschnitte */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
+           <div className="bg-white rounded-lg overflow-hidden border-2 pricing-box-shadow" style={{ borderColor: 'rgba(0, 0, 0, 0.5)' }}>
                            <div 
-                className="px-6 py-4 relative"
+                className={`px-6 py-4 relative transition-all duration-300 ${!patternLoaded ? 'blur-sm' : ''}`}
                 style={{
                   backgroundImage: `url('/Pattern6.png')`,
                   backgroundSize: '200px 200px',

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { openCituroBooking } from "../utils/cituro";
 
 export function BereitSection() {
   return (
@@ -27,9 +28,12 @@ export function BereitSection() {
           Lassen Sie uns gemeinsam Ihren perfekten Style finden!
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
-                     <button className="rounded-lg bg-white px-8 py-4 text-base font-medium text-[#2E2E2E] hover:bg-gray-100 transition-colors">
-             Buchen & Preise ansehen
-           </button>
+                                 <button 
+              className="rounded-lg bg-white px-8 py-4 text-base font-medium text-[#2E2E2E] hover:bg-gray-100 transition-colors"
+              onClick={openCituroBooking}
+            >
+              Buchen & Preise ansehen
+            </button>
         </div>
       </div>
     </section>

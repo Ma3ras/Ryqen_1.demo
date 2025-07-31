@@ -52,7 +52,7 @@ export function Gallery22() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {galleryImages.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg bg-gray-100">
+            <div key={index} className="overflow-hidden rounded-lg bg-gray-100" style={{ boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)' }}>
               <div className="relative aspect-[4/3]">
                 {!loadedImages[index] && (
                   <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
@@ -88,7 +88,7 @@ export function Gallery22() {
                     className={`w-full h-full object-cover transition-all duration-300 ${
                       loadedImages[index] 
                         ? 'opacity-100 hover:scale-105' 
-                        : 'opacity-0'
+                        : 'opacity-0 blur-sm'
                     }`}
                     alt={image.alt}
                     loading={index === 0 ? "eager" : "lazy"}

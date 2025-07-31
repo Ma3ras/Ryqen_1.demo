@@ -2,6 +2,7 @@
 
 
 import React from "react";
+import { openCituroBooking } from "../utils/cituro";
 
 export function Header50() {
   return (
@@ -18,7 +19,10 @@ export function Header50() {
               Beratung und Zufriedenheit unserer Kunden.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <button className="rounded-lg bg-[#2E2E2E] px-8 py-4 text-base font-medium text-white hover:bg-[#404040] transition-colors">
+              <button 
+                className="rounded-lg bg-[#2E2E2E] px-8 py-4 text-base font-medium text-white hover:bg-[#404040] transition-colors"
+                onClick={openCituroBooking}
+              >
                 Buchen & Preise erfahren
               </button>
               <button className="rounded-lg bg-white px-8 py-4 text-base font-medium text-gray-800 hover:bg-gray-100 transition-colors">
