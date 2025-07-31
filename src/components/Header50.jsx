@@ -1,10 +1,16 @@
 "use client";
 
 
-import React from "react";
+import React, { useState } from "react";
 import { openCituroBooking } from "../utils/cituro";
 
 export function Header50() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <section id="relume" className="relative px-[5%]">
       <div className="relative z-10 container">
@@ -33,14 +39,22 @@ export function Header50() {
         </div>
       </div>
       <div className="absolute inset-0 z-0">
+        {!imageLoaded && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
+          </div>
+        )}
         <picture>
           <source srcSet="/herosection_dienstleistungen1.avif" type="image/avif" />
           <source srcSet="/herosection_dienstleistungen1.webp" type="image/webp" />
           <img
             src="/herosection_dienstleistungen1.jpg"
-            className="size-full object-cover"
+            className={`size-full object-cover transition-all duration-300 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0 blur-sm'
+            }`}
             alt="Professional hair salon services and styling"
             loading="eager"
+            onLoad={handleImageLoad}
           />
         </picture>
         <div className="absolute inset-0 bg-black/50" />

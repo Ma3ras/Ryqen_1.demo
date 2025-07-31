@@ -1,8 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export function Layout24() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <section id="relume" className="py-2 md:py-3 lg:py-4">
       <div className="grid grid-cols-1 md:grid-cols-2 md:items-center">
@@ -28,16 +34,24 @@ export function Layout24() {
           </p>
         </div>
         <div className="w-full relative">
-                         <picture>
-                 <source srcSet="/herosection2.avif" type="image/avif" />
-                 <source srcSet="/herosection2.webp" type="image/webp" />
-                 <img
-                   src="/herosection2.jpg"
-                   className="w-full h-[36.45rem] md:h-[45.36rem] lg:h-[55.08rem] object-cover"
-                   alt="Professional hair salon interior with modern styling"
-                   loading="lazy"
-                 />
-               </picture>
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center z-10">
+              <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
+            </div>
+          )}
+          <picture>
+            <source srcSet="/herosection2.avif" type="image/avif" />
+            <source srcSet="/herosection2.webp" type="image/webp" />
+            <img
+              src="/herosection2.jpg"
+              className={`w-full h-[36.45rem] md:h-[45.36rem] lg:h-[55.08rem] object-cover transition-all duration-300 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0 blur-sm'
+              }`}
+              alt="Professional hair salon interior with modern styling"
+              loading="lazy"
+              onLoad={handleImageLoad}
+            />
+          </picture>
                {/* Mobile text on image */}
                <div className="absolute top-0 left-0 right-0 md:hidden">
                  <div className="p-4">
