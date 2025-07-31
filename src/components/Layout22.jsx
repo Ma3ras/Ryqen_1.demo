@@ -1,16 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { openCituroBooking } from "../utils/cituro";
 import { RxChevronRight } from "react-icons/rx";
 
 export function Layout22() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
   return (
     <section id="relume" className="bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 md:items-center">
@@ -34,22 +28,14 @@ export function Layout22() {
           </div>
         </div>
         <div className="w-full h-full relative">
-          {!imageLoaded && (
-            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center z-10">
-              <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
-            </div>
-          )}
           <picture>
             <source srcSet="/ueber_uns1.avif" type="image/avif" />
             <source srcSet="/ueber_uns1.webp" type="image/webp" />
             <img
               src="/ueber_uns1.jpg"
-              className={`w-full h-full object-cover transition-opacity duration-200 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
+              className="w-full h-full object-cover"
               alt="Salon interior - modern hair salon with professional styling stations"
-              loading="lazy"
-              onLoad={handleImageLoad}
+              loading="eager"
             />
           </picture>
         </div>
