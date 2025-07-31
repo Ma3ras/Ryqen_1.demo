@@ -85,10 +85,10 @@ export function Gallery5() {
                   <img
                     src={image.jpg}
                     srcSet={`${image.jpg} 1x, ${image.jpgLarge} 2x`}
-                    className={`w-full h-full object-cover transition-all duration-300 ${
+                    className={`w-full h-full object-cover transition-opacity duration-200 ${
                       loadedImages[index] 
                         ? 'opacity-100 hover:scale-105' 
-                        : 'opacity-0 blur-sm'
+                        : 'opacity-0'
                     }`}
                     alt={image.alt}
                     loading={index === 0 ? "eager" : "lazy"}
