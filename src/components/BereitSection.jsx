@@ -27,9 +27,9 @@ export function BereitSection() {
           Lassen Sie uns gemeinsam Ihren perfekten Style finden!
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <button className="rounded-lg bg-white px-8 py-4 text-base font-medium text-[#2E2E2E] hover:bg-gray-100 transition-colors">
-            Jetzt Termin buchen
-          </button>
+                     <button className="rounded-lg bg-white px-8 py-4 text-base font-medium text-[#2E2E2E] hover:bg-gray-100 transition-colors">
+             Buchen & Preise ansehen
+           </button>
         </div>
       </div>
     </section>

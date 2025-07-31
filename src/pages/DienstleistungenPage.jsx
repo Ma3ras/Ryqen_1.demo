@@ -1,7 +1,8 @@
 import React from "react";
 import { Navbar1 } from "../components/Navbar1";
 import { Header50 } from "../components/Header50";
-import { Layout229 } from "../components/Layout229";
+import { Layout249 } from "../components/Layout249";
+import { ServicePricing } from "../components/ServicePricing";
 import { Gallery5 } from "../components/Gallery5";
 import { Testimonial6 } from "../components/Testimonial6";
 import { Cta27 } from "../components/Cta27";
@@ -12,7 +13,8 @@ export default function DienstleistungenPage() {
     <div>
       <Navbar1 />
       <Header50 />
-      <Layout229 />
+      <Layout249 />
+      <ServicePricing darkBackground={true} />
       <Gallery5 />
       <Testimonial6 />
       <Cta27 />

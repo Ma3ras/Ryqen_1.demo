@@ -26,7 +26,7 @@ export function Testimonial6() {
               <BiSolidStar className="size-6" />
             </div>
             <blockquote className="text-md leading-[1.4] font-medium md:text-xl">
-              „Der beste Friseur in der Stadt – immer wieder!“
+              „Der beste Friseur in der Stadt – immer wieder!"
             </blockquote>
             <div className="mt-6 flex w-full flex-col md:mt-8 md:w-auto">
               <div className="mb-4">
@@ -59,7 +59,7 @@ export function Testimonial6() {
               <BiSolidStar className="size-6" />
             </div>
             <blockquote className="text-md leading-[1.4] font-medium md:text-xl">
-              „Ich liebe meinen neuen Look – danke!“
+              „Ich liebe meinen neuen Look – danke!"
             </blockquote>
             <div className="mt-6 flex w-full flex-col md:mt-8 md:w-auto">
               <div className="mb-4">
@@ -92,7 +92,7 @@ export function Testimonial6() {
               <BiSolidStar className="size-6" />
             </div>
             <blockquote className="text-md leading-[1.4] font-medium md:text-xl">
-              „Tolle Atmosphäre und super freundliches Team!“
+              „Tolle Atmosphäre und super freundliches Team!"
             </blockquote>
             <div className="mt-6 flex w-full flex-col md:mt-8 md:w-auto">
               <div className="mb-4">

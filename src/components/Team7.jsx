@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
+import { UserPlus } from "@phosphor-icons/react";
 
 export function Team7() {
   return (
-    <section id="relume" className="px-[5%] py-20 md:py-32 lg:py-40 bg-white">
+    <section id="relume" className="px-[5%] pt-20 pb-10 md:pt-32 md:pb-16 lg:pt-40 lg:pb-20 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16 md:mb-20">
           <h2
@@ -25,10 +26,18 @@ export function Team7() {
           {/* Team Member 1 */}
           <div className="text-center">
             <div className="mb-6 md:mb-8">
-              <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden">
+                <picture>
+                  <source srcSet="/employee1.avif" type="image/avif" />
+                  <source srcSet="/employee1.webp" type="image/webp" />
+                  <img
+                    src="/employee1.png"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 30%' }}
+                    alt="Anna Müller - Balayage-Spezialistin"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <h4
@@ -45,10 +54,18 @@ export function Team7() {
           {/* Team Member 2 */}
           <div className="text-center">
             <div className="mb-6 md:mb-8">
-              <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden">
+                <picture>
+                  <source srcSet="/employee2.avif" type="image/avif" />
+                  <source srcSet="/employee2.webp" type="image/webp" />
+                  <img
+                    src="/employee2.png"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 30%' }}
+                    alt="Max Schmidt - Farbkorrektur-Spezialist"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <h4
@@ -65,10 +82,18 @@ export function Team7() {
           {/* Team Member 3 */}
           <div className="text-center">
             <div className="mb-6 md:mb-8">
-              <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden">
+                <picture>
+                  <source srcSet="/employee3.avif" type="image/avif" />
+                  <source srcSet="/employee3.webp" type="image/webp" />
+                  <img
+                    src="/employee3.png"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 30%' }}
+                    alt="Lisa Becker - Saloninhaberin"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <h4
@@ -85,10 +110,18 @@ export function Team7() {
           {/* Team Member 4 */}
           <div className="text-center">
             <div className="mb-6 md:mb-8">
-              <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden">
+                <picture>
+                  <source srcSet="/employee4.avif" type="image/avif" />
+                  <source srcSet="/employee4.webp" type="image/webp" />
+                  <img
+                    src="/employee4.png"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 30%' }}
+                    alt="Tom Fischer - Barbier"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <h4
@@ -105,10 +138,18 @@ export function Team7() {
           {/* Team Member 5 */}
           <div className="text-center">
             <div className="mb-6 md:mb-8">
-              <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden">
+                <picture>
+                  <source srcSet="/employee5.avif" type="image/avif" />
+                  <source srcSet="/employee5.webp" type="image/webp" />
+                  <img
+                    src="/employee5.png"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 20%' }}
+                    alt="Sophie Klein - Coloristin"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <h4
@@ -126,9 +167,7 @@ export function Team7() {
           <div className="text-center">
             <div className="mb-6 md:mb-8">
               <div className="mx-auto w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+                <UserPlus className="w-12 h-12 text-gray-500" weight="regular" />
               </div>
             </div>
             <h4

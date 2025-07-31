@@ -10,12 +10,14 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@relume_io/relume-tailwind": "^1.0.0",
     "@relume_io/relume-ui": "^1.0.0",
     "framer-motion": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.30.1"
+    "react-router-dom": "^6.30.1",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
