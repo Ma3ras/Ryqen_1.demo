@@ -35,17 +35,15 @@ export function Header30() {
           <source srcSet="/herosection3.webp" type="image/webp" />
           <img
             src="/herosection3.jpg"
-            className="size-full object-cover transition-all duration-300 ease-out"
+            className="size-full object-cover transition-all duration-500 ease-out"
             style={{ 
               objectPosition: 'center 30%',
-              filter: 'blur(4px)',
-              transform: 'scale(1.05)'
+              filter: 'blur(8px)'
             }}
             alt="Modern hair salon with professional styling"
             loading="eager"
             onLoad={(e) => {
               e.target.style.filter = 'blur(0px)';
-              e.target.style.transform = 'scale(1)';
             }}
           />
         </picture>
