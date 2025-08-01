@@ -6,16 +6,19 @@ import {
   BiLogoInstagram,
   BiLogoYoutube,
 } from "react-icons/bi";
+import { useSiteConfig } from "../config/sites";
 
 export function Footer4() {
+  const siteConfig = useSiteConfig();
+
   return (
     <footer id="relume" className="px-[5%] py-12 md:py-18 lg:py-20">
       <div className="container">
         <div className="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
           <a href="#" className="lg:justify-self-start">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-              alt="Logo image"
+              src={siteConfig.logo}
+              alt={`${siteConfig.name} logo`}
               className="inline-block"
             />
           </a>

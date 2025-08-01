@@ -3,7 +3,7 @@ export const siteConfigs = {
   // Main production site
   main: {
     name: "Ryqen",
-    logo: "/logo-main.png",
+    logo: "/logo-haarkunst-passau.png",
     hero: {
       title: "Dein Friseur für moderne Schnitte & natürliche Farben in Passau",
       subtitle: "Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit."
@@ -22,7 +22,7 @@ export const siteConfigs = {
   // S5T9U3V7 subdomain site
   s5t9u3v7: {
     name: "Ryqen S5T9U3V7",
-    logo: "/logo-s5t9u3v7.png",
+    logo: "/logo-haarkunst-passau.png",
     hero: {
       title: "Dein Friseur für moderne Schnitte & natürliche Farben in Passau",
       subtitle: "Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit."
@@ -41,7 +41,7 @@ export const siteConfigs = {
   // Staging site
   staging: {
     name: "Ryqen Staging",
-    logo: "/logo-staging.png",
+    logo: "/logo-haarkunst-passau.png",
     hero: {
       title: "Dein Friseur für moderne Schnitte & natürliche Farben in Passau",
       subtitle: "Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit."
@@ -60,7 +60,7 @@ export const siteConfigs = {
   // Development site
   dev: {
     name: "Ryqen Dev",
-    logo: "/logo-dev.png",
+    logo: "/logo-haarkunst-passau.png",
     hero: {
       title: "Dein Friseur für moderne Schnitte & natürliche Farben in Passau",
       subtitle: "Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit."

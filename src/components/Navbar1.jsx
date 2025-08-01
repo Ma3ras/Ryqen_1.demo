@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { openCituroBooking } from "../utils/cituro";
+import { useSiteConfig } from "../config/sites";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,6 +69,7 @@ const ScrollToTopLink = ({ to, children, className, onClick }) => {
 
 export function Navbar1() {
   const useActive = useRelume();
+  const siteConfig = useSiteConfig();
   return (
     <section
       id="relume"
@@ -82,8 +84,8 @@ export function Navbar1() {
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <ScrollToTopLink to="/">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-              alt="Logo image"
+              src={siteConfig.logo}
+              alt={`${siteConfig.name} logo`}
             />
           </ScrollToTopLink>
           <button
