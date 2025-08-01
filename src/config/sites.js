@@ -81,14 +81,19 @@ export const siteConfigs = {
 export const getCurrentSiteConfig = () => {
   const environment = process.env.NODE_ENV || 'development';
   const siteConfig = process.env.SITE_CONFIG || 'main'; // Use environment variable first
-  const subdomain = typeof window !== 'undefined' ? window.location.hostname.split('.')[0] : '';
+  
+  // Only try to get subdomain if we're in a browser environment
+  let subdomain = '';
+  if (typeof window !== 'undefined' && window.location) {
+    subdomain = window.location.hostname.split('.')[0];
+  }
 
   // Map subdomains to configs
   const subdomainMap = {
     's5t9u3v7': 's5t9u3v7',
     'staging': 'staging',
     'dev': 'dev',
-    'localhost': 'dev'
+    'localhost': 'main' // Use main config for localhost development
   };
 
   // Use environment variable first, then subdomain, then default to main
