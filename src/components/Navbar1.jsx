@@ -81,12 +81,12 @@ export function Navbar1() {
       }}
     >
       <div className="size-full lg:flex lg:items-center lg:justify-between">
-        <div className="flex min-h-24 items-center justify-between px-[5%] md:min-h-30 lg:min-h-36 lg:px-0">
+        <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-20 lg:min-h-24 lg:px-0">
           <ScrollToTopLink to="/">
             <img
               src={siteConfig.logo}
               alt={`${siteConfig.name} logo`}
-              className="h-24 w-auto md:h-30 lg:h-36"
+              className="h-12 w-auto md:h-16 lg:h-20"
             />
           </ScrollToTopLink>
           <button
