@@ -86,6 +86,7 @@ export function Navbar1() {
             <img
               src={siteConfig.logo}
               alt={`${siteConfig.name} logo`}
+              className="h-8 w-auto md:h-10 lg:h-12"
             />
           </ScrollToTopLink>
           <button

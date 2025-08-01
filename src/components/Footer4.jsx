@@ -19,7 +19,7 @@ export function Footer4() {
             <img
               src={siteConfig.logo}
               alt={`${siteConfig.name} logo`}
-              className="inline-block"
+              className="h-10 w-auto md:h-12 lg:h-14"
             />
           </a>
           <ul className="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
