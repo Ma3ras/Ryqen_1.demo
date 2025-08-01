@@ -4,36 +4,20 @@
 
 # Production site (main domain)
 [context.production]
-  environment = { NODE_ENV = "production" }
+  environment = { NODE_ENV = "production", SITE_CONFIG = "main" }
 
 # S5T9U3V7 subdomain site
 [context.s5t9u3v7]
-  environment = { NODE_ENV = "production" }
+  environment = { NODE_ENV = "production", SITE_CONFIG = "s5t9u3v7" }
 
 # Staging site (staging subdomain)
 [context.staging]
-  environment = { NODE_ENV = "staging" }
+  environment = { NODE_ENV = "staging", SITE_CONFIG = "staging" }
 
 # Development site (dev subdomain)
 [context.deploy-preview]
-  environment = { NODE_ENV = "development" }
+  environment = { NODE_ENV = "development", SITE_CONFIG = "dev" }
 
 # Branch deployments
 [context.branch-deploy]
-  environment = { NODE_ENV = "development" }
-
-# Environment variables for different sites
-[context.production.environment]
-  SITE_CONFIG = "main"
-
-[context.s5t9u3v7.environment]
-  SITE_CONFIG = "s5t9u3v7"
-
-[context.staging.environment]
-  SITE_CONFIG = "staging"
-
-[context.deploy-preview.environment]
-  SITE_CONFIG = "dev"
-
-[context.branch-deploy.environment]
-  SITE_CONFIG = "dev" 
+  environment = { NODE_ENV = "development", SITE_CONFIG = "dev" } 
