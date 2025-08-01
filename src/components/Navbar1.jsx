@@ -83,11 +83,14 @@ export function Navbar1() {
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-20 lg:min-h-24 lg:px-0">
           <ScrollToTopLink to="/">
-            <img
-              src={siteConfig.logo}
-              alt={`${siteConfig.name} logo`}
-              className="h-12 w-auto md:h-16 lg:h-20"
-            />
+            <picture>
+              <source srcSet="/logo-haarkunst-passau.webp" type="image/webp" />
+              <img
+                src="/logo-haarkunst-passau-optimized.png"
+                alt={`${siteConfig.name} logo`}
+                className="h-12 w-auto md:h-16 lg:h-20"
+              />
+            </picture>
           </ScrollToTopLink>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"

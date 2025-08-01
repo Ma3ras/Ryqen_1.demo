@@ -1,7 +1,7 @@
 // Single site configuration for HaarKunst Passau
 export const siteConfig = {
   name: "HaarKunst Passau",
-  logo: "/logo-haarkunst-passau.png",
+  logo: "/logo-haarkunst-passau.webp",
   hero: {
     title: "Dein Friseur für moderne Schnitte & natürliche Farben in Passau",
     subtitle: "Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit."
