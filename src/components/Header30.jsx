@@ -2,18 +2,21 @@
 
 import React from "react";
 import { openCituroBooking } from "../utils/cituro";
+import { useSiteConfig } from "../config/sites";
 
 export function Header30() {
+  const siteConfig = useSiteConfig();
+  
   return (
     <section id="relume" className="relative px-[5%]">
       <div className="relative z-10 container">
         <div className="flex max-h-[60rem] min-h-svh items-center justify-center py-16 text-center md:py-24 lg:py-28">
           <div className="w-full max-w-lg">
             <h1 className="mb-5 text-6xl font-medium text-white md:mb-6 md:text-9xl lg:text-10xl md:text-center text-left">
-              Dein Friseur für moderne Schnitte & natürliche Farben in [City]
+              {siteConfig.hero.title}
             </h1>
             <p className="text-white md:text-md hidden md:block">
-              Seit 2020 vereinen wir moderne Schnitttechniken mit persönlicher Beratung und natürlicher Farbgebung. Unser Salon steht für Qualität, Stil und echte Kundenzufriedenheit.
+              {siteConfig.hero.subtitle}
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
               <button 

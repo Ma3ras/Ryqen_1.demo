@@ -1,8 +1,11 @@
 "use client";
 
 import React from "react";
+import { useSiteConfig } from "../config/sites";
 
 export function Contact2() {
+  const siteConfig = useSiteConfig();
+
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
@@ -29,8 +32,7 @@ export function Contact2() {
                     Adresse
                   </h3>
                   <p className="text-gray-600">
-                    Musterstraße 123<br />
-                    12345 Musterstadt
+                    {siteConfig.contact.address}
                   </p>
                 </div>
               </div>
@@ -47,7 +49,7 @@ export function Contact2() {
                     Telefon
                   </h3>
                   <p className="text-gray-600">
-                    +49 123 456 789
+                    {siteConfig.contact.phone}
                   </p>
                 </div>
               </div>
@@ -64,7 +66,7 @@ export function Contact2() {
                     E-Mail
                   </h3>
                   <p className="text-gray-600">
-                    info@friseur-musterstadt.de
+                    {siteConfig.contact.email}
                   </p>
                 </div>
               </div>

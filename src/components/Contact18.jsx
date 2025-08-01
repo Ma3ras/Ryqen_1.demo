@@ -2,8 +2,11 @@
 
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+import { useSiteConfig } from "../config/sites";
 
 export function Contact18() {
+  const siteConfig = useSiteConfig();
+
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
@@ -18,8 +21,8 @@ export function Contact18() {
             <p className="mb-5 md:mb-6">
               Wir freuen uns auf Ihre Nachricht und antworten schnellstmöglich.
             </p>
-            <a className="underline" href="#">
-              hello@relume.io
+            <a className="underline" href={`mailto:${siteConfig.contact.email}`}>
+              {siteConfig.contact.email}
             </a>
           </div>
           <div className="flex flex-col items-center justify-start text-center">
@@ -33,8 +36,8 @@ export function Contact18() {
               Rufen Sie uns an – wir beraten Sie gerne und helfen bei allen
               Fragen.
             </p>
-            <a className="underline" href="#">
-              +49 (0) 123 456 789
+            <a className="underline" href={`tel:${siteConfig.contact.phone}`}>
+              {siteConfig.contact.phone}
             </a>
           </div>
           <div className="flex flex-col items-center justify-start text-center">
@@ -49,7 +52,7 @@ export function Contact18() {
               es Ihnen passt.
             </p>
             <a className="underline" href="#">
-              Musterstraße 123, Berlin 10115 DE
+              {siteConfig.contact.address}
             </a>
           </div>
         </div>

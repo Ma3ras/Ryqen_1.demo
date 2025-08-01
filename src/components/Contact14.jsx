@@ -3,8 +3,11 @@
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 import { RxChevronRight } from "react-icons/rx";
+import { useSiteConfig } from "../config/sites";
 
 export function Contact14() {
+  const siteConfig = useSiteConfig();
+
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
@@ -27,7 +30,7 @@ export function Contact14() {
                     E-Mail
                   </h3>
                   <p className="text-gray-600">
-                    info@friseursalon.de
+                    {siteConfig.contact.email}
                   </p>
                 </div>
               </div>
@@ -43,7 +46,7 @@ export function Contact14() {
                     Rufen Sie uns an
                   </p>
                   <p className="text-gray-600">
-                    +49 (0) 123 456789
+                    {siteConfig.contact.phone}
                   </p>
                 </div>
               </div>
@@ -56,7 +59,7 @@ export function Contact14() {
                     Adresse
                   </h3>
                   <p className="text-gray-600 mb-2">
-                    Musterstraße 123, 10115 Berlin, Deutschland
+                    {siteConfig.contact.address}
                   </p>
                   <button className="text-[#2E2E2E] font-medium flex items-center gap-1 hover:text-gray-600 transition-colors">
                     Wegbeschreibung

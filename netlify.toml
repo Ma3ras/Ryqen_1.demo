@@ -1,0 +1,39 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Production site (main domain)
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# S5T9U3V7 subdomain site
+[context.s5t9u3v7]
+  environment = { NODE_ENV = "production" }
+
+# Staging site (staging subdomain)
+[context.staging]
+  environment = { NODE_ENV = "staging" }
+
+# Development site (dev subdomain)
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
+
+# Branch deployments
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }
+
+# Environment variables for different sites
+[context.production.environment]
+  SITE_CONFIG = "main"
+
+[context.s5t9u3v7.environment]
+  SITE_CONFIG = "s5t9u3v7"
+
+[context.staging.environment]
+  SITE_CONFIG = "staging"
+
+[context.deploy-preview.environment]
+  SITE_CONFIG = "dev"
+
+[context.branch-deploy.environment]
+  SITE_CONFIG = "dev" 
